@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+   
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+           
+        </div>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2>Cadastro</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="username" placeholder="Nome" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="ra" placeholder="RA" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password1" placeholder="Senha" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password2" placeholder="Confirme a Senha" required>
+                </div>
+                <button type="submit" class="btn">Cadastrar</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
